@@ -1,16 +1,11 @@
 import React from "react";
 import RightCardContent from "./RightCardContent";
 
-function Rightcard() {
+function Rightcard(props) {
   return (
     <div className="h-full w-70 bg-red-500 overflow-hidden shrink-0   relative rounded-4xl">
-      <img
-        className="h-full w-full object-cover"
-        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
-      />
-<RightCardContent/>
-
+      <img className="h-full w-full object-cover" src={props.img} alt="" />
+      <RightCardContent id={props.id} lable={props.lable} />
     </div>
   );
 }
